@@ -1,0 +1,43 @@
+<script>
+    let hamburger = document.querySelector('#nav-icon3');
+    let sidebar = document.querySelector('#sidebar');
+    // toggle sidebar
+    hamburger.addEventListener('click', function(){
+      this.classList.toggle('open');
+      sidebar.classList.toggle('sidebar-open');
+      sidebar.classList.toggle('sidebar-close');
+      document.querySelector('nav').classList.toggle('nav-hidden');
+    })
+
+    document.addEventListener('mouseup', function(e){
+        let dieSidebar = document.querySelector('.sidebar-open');
+        let hamContainer = document.querySelector('.hamburger');
+
+        // close sidebar when clicked outside of it
+        if (!dieSidebar.contains(e.target) && !hamContainer.contains(e.target)){
+            dieSidebar.classList.toggle('sidebar-close');
+            dieSidebar.classList.toggle('sidebar-open');
+            document.querySelector('.nav-hidden').classList.toggle('nav-hidden');
+            hamburger.classList.toggle('open');
+        }
+    })
+</script>
+
+<div class="logo">
+    <a href="index.html"><img id="logo" src="images/logo_L_transparent.png"/></a>
+</div>
+<nav>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="#">Careers</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+</nav>
+<div class="hamburger">
+  <div id="nav-icon3">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>

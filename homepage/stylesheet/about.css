@@ -1,0 +1,74 @@
+.founders .item {
+    background: #F8FDFC;
+    padding: 20px;
+    margin: 0 20px 30px;
+    position: relative;
+    max-width: 500px;
+    height: 500px;
+    min-width: 300px;
+    border-radius: 5px;
+}
+
+.founders .item-title {
+    margin: 15px;
+}
+
+.founders .item-title {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.founders .name {
+    margin: 0;
+}
+.post {
+    font-weight: 500;
+    color: #FF5602;
+}
+
+.item:hover .overlay-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay-text {
+    border-radius: 5px;
+    background: rgb(255,255,255, .9);
+    overflow: scroll;
+    padding: 20px;
+}
+.overlay-text * {
+    color: #000
+    text-shadow: 2px 2px 2px white;;
+}
+
+.item img {
+    max-width: 250px;
+    border-radius: 5px;
+}
+
+.founders-inner {
+    display: flex;
+    justify-content: center;
+}
+.bg-color {
+    background: rgb(0,187,190,.7)
+}
+
+@media (min-width: 1200px) {
+    .founders-inner > * {
+        width: calc(100%/4);
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 991px) {
+    .founders-inner > * {
+        width: calc(100%/3);
+    }
+}
+
+@media (max-width: 990px) {
+    .founders-inner {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}

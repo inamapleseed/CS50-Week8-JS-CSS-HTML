@@ -1,0 +1,24 @@
+.bg-color {
+    background: rgb(255,86,2,.6);
+}
+
+.section-title {
+    margin-bottom: 0;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    iframe {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 767px){
+    .info {
+        flex-direction: column;
+    }
+}
